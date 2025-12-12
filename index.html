@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语动词分类完整学习指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #2c5530;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .section-content {
+            padding: 30px;
+        }
+
+        /* 实义动词样式 */
+        .verb-type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .verb-card {
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .verb-card.transitive::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #f44336;
+        }
+		.verb-card.transitive::before {
+  display: none;
+}
+
+        .verb-card.intransitive {
+            border-color: #81c784;
+        }
+
+        .card-header {
+            background: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .card-subtitle {
+            background: #66bb6a;
+            color: white;
+            padding: 8px 20px;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .characteristic {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .characteristic::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .examples {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .example {
+            margin-bottom: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .chinese-note {
+            color: #f44336;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* 系动词样式 */
+        .linking-verbs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .linking-verb-group {
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .be-verb-group {
+            border-color: #4caf50;
+        }
+
+        .sensory-verb-group {
+            border-color: #66bb6a;
+        }
+
+        .group-header {
+            background: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .sensory-verb-group .group-header {
+            background: #66bb6a;
+        }
+
+        .group-content {
+            padding: 20px;
+        }
+
+        .verb-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .verb-list li {
+            padding: 5px 0;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .verb-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        /* 情态动词样式 */
+        .modal-verbs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .modal-verb-card {
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .usage-section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .usage-section:last-child {
+            border-bottom: none;
+        }
+
+        .usage-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c5530;
+            display: flex;
+            align-items: center;
+        }
+
+        .tense-note {
+            color: #f44336;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            font-style: italic;
+        }
+
+        .modal-example {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-decoration-color: #f44336;
+            text-decoration-thickness: 2px;
+        }
+
+        .handwriting-red {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        /* 语气差别样式 */
+        .mood-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .mood-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mood-category {
+            margin-bottom: 25px;
+        }
+
+        .mood-category h4 {
+            color: #4caf50;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #4caf50;
+        }
+
+        .modals-sequence {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .modal-word {
+            position: relative;
+            padding: 8px 12px;
+            background: white;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .red-less-than {
+            color: #f44336;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0 5px;
+        }
+
+        /* 情态动词基础知识样式 */
+        .basic-rules {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .rules-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .rule-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .rule-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #f44336;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .handwriting-examples {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .handwriting-title {
+            color: #721c24;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .handwriting-text {
+            color: #721c24;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        /* 助动词样式 */
+        .auxiliary-section {
+            text-align: center;
+        }
+
+        .auxiliary-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+
+        .aux-button {
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .aux-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .aux-button.dark-green {
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
+        }
+
+        .aux-button.medium-green {
+            background: linear-gradient(135deg, #4caf50, #388e3c);
+        }
+
+        .aux-button.light-green {
+            background: linear-gradient(135deg, #66bb6a, #4caf50);
+        }
+
+        /* 时态构成样式 */
+        .tense-examples {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .tense-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #4caf50;
+            background: #f8f9fa;
+        }
+
+        .tense-title {
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tense-sentence {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .highlight-phrase {
+            background: #ffebee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #c62828;
+        }
+
+        /* 语态构成样式 */
+        .voice-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .voice-item {
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .active-voice {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+        }
+
+        .passive-voice {
+            background: #fce4ec;
+            border: 2px solid #e91e63;
+        }
+
+        .voice-label {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .active-voice .voice-label {
+            color: #1976d2;
+        }
+
+        .passive-voice .voice-label {
+            color: #c2185b;
+        }
+
+        .voice-sentence {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .red-highlight {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        /* 疑问句否定句样式 */
+        .question-negation {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .sentence-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .sentence-item {
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .statement {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+        }
+
+        .negation {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+
+        .question {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+        }
+
+        .red-text {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .voice-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-content {
+                padding: 20px;
+            }
+            
+            .modals-sequence {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .red-less-than {
+                transform: rotate(90deg);
+                display: inline-block;
+                text-align: center;
+                margin: 5px 0;
+            }
+        }
+
+        .interactive-toggle {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background 0.3s;
+        }
+
+        .interactive-toggle:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>动词</h1>
+            
+        </div>
+
+        <!-- 1. 实义动词 Section -->
+        <div class="section">
+            <div class="section-header">
+                1. 实义动词 (Notional Verbs)
+            </div>
+            <div class="section-content">
+                <div class="verb-type-grid">
+                    <!-- 及物动词 -->
+                    <div class="verb-card transitive">
+                        <div class="card-header">及物动词</div>
+                        <div class="card-subtitle">transitive verb (vt.)</div>
+                        <div class="card-body">
+                            <div class="characteristic">
+                                动词后可直接跟宾语
+                                <span class="chinese-note"></span>
+                            </div>
+                            <div class="examples">
+                                <div class="example"><span class="highlight">I love</span> you.</div>
+                                <div class="example"><span class="highlight">She reads</span> books every day.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 不及物动词 -->
+                    <div class="verb-card intransitive">
+                        <div class="card-header">不及物动词</div>
+                        <div class="card-subtitle">intransitive verb (vi.)</div>
+                        <div class="card-body">
+                            <div class="characteristic">动词后不可直接跟宾语</div>
+                            <div class="characteristic">或需要通过介词再接宾语</div>
+                            <div class="examples">
+                                <div class="example"><span class="highlight">Tom left.</span></div>
+                                <div class="example"><span class="highlight">She looks at</span> me.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 系动词 Section -->
+        <div class="section">
+            <div class="section-header">
+                2. 系动词 (Linking Verbs)
+            </div>
+            <div class="section-content">
+                <div class="linking-verbs-container">
+                    <!-- Be动词 -->
+                    <div class="linking-verb-group be-verb-group">
+                        <div class="group-header">be动词</div>
+                        <div class="group-content">
+                            <div class="chinese-note">是</div>
+                            <ul class="verb-list">
+                                <li>am, is, are...</li>
+                            </ul>
+                            <div class="examples">
+                                <div class="example"><span class="highlight">I am</span> a doctor.<span class="chinese-note">是</span></div>
+                                <div class="example"><span class="highlight">She is</span> very beautiful.<span class="chinese-note">是</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 感官动词 -->
+                    <div class="linking-verb-group sensory-verb-group">
+                        <div class="group-header">感官动词</div>
+                        <div class="group-content">
+                            <ul class="verb-list">
+                                <li>feel</li>
+                                <li>taste</li>
+                                <li>smell</li>
+                                <li>sound</li>
+								<li>look</li>
+								<li>remain</li>
+								<li>stay</li>
+								<li>keep</li>
+								<li>become</li>
+								<li>get</li>
+								<li>turn</li>
+								<li>grow</li>
+								<li>go</li>
+                            </ul>
+                            <div class="examples">
+                                <div class="example">The bread <span class="highlight">tastes</span> good.</div>
+                                <div class="example">The flower <span class="highlight">smells</span> very sweet.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 情态动词 Section -->
+        <div class="section">
+            <div class="section-header">
+                3. 情态动词 (Modal Verbs)
+            </div>
+            <div class="section-content">
+                <div class="basic-rules">
+                    <div class="rules-title">情态动词基本规则</div>
+                    
+                    <div class="rule-item">
+                        could/might/would 是 can/may/will 的过去式
+                    </div>
+                    
+                    <div class="rule-item">
+                        过去式语气比原形更加委婉
+                    </div>
+                    
+                    <div class="rule-item">
+                        情态动词无人称变化
+                    </div>
+                    
+                    <div class="rule-item">
+                        情态动词+动词原形
+                   
+
+                  
+                    </div>
+                </div>
+
+                <div class="mood-section">
+                    <div class="mood-title">情态动词语气差别</div>
+                    
+                    <div class="mood-category">
+                        <h4>√ 表可能</h4>
+                        <div class="modals-sequence">
+                            <span class="modal-word">might</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">may</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">could</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">can</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">should</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">must</span>
+                        </div>
+                        <p style="color: #666; font-style: italic;">可能性从小到大排列</p>
+                    </div>
+
+                    <div class="mood-category">
+                        <h4>√ 表许可</h4>
+                        <div class="modals-sequence">
+                            <span class="modal-word">might</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">may</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">could</span>
+                            <span class="red-less-than">&lt;</span>
+                            <span class="modal-word">can</span>
+                        </div>
+                        <p style="color: #666; font-style: italic;">礼貌程度递增</p>
+                    </div>
+                </div>
+
+                <div class="modal-verbs-grid">
+                    <!-- Can Could -->
+                    <div class="modal-verb-card">
+                        <div class="modal-header">can could</div>
+                        
+                        <div class="usage-section">
+                            <div class="usage-title">
+                                表能力（时态差别）
+                                <span class="tense-note handwriting-red">现/将</span>
+                            </div>
+                            <div class="modal-example">
+                                <span class="underline">I can</span> do it.
+                            </div>
+                            <div class="modal-example">
+                                <span class="underline">She could</span> do it when she was five years old.
+                            </div>
+                        </div>
+
+                        <div class="usage-section">
+                            <div class="usage-title">表可能（时态语气差别）</div>
+                            <div class="modal-example">
+                                It can't/couldn't be true.
+                            </div>
+                        </div>
+
+                        <div class="usage-section">
+                            <div class="usage-title">表请求（语气差别）</div>
+                            <div class="modal-example">
+                                Can/Could I use your phone?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- May Might -->
+                    <div class="modal-verb-card">
+                        <div class="modal-header">may might</div>
+                        
+                        <div class="usage-section">
+                            <div class="usage-title">
+                                表可能
+                                <span class="tense-note">(时态/语气差别)</span>
+                            </div>
+                            <div class="modal-example">
+                                It may/might be true.
+                            </div>
+                        </div>
+
+                        <div class="usage-section">
+                            <div class="usage-title">
+                                表请求
+                                <span class="tense-note">(语气差别)</span>
+                            </div>
+                            <div class="modal-example">
+                                May/Might I use your phone?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Will Would -->
+                    <div class="modal-verb-card">
+                        <div class="modal-header">will would</div>
+                        
+                        <div class="usage-section">
+                            <div class="usage-title">
+                                表意愿
+                                <span class="tense-note">(时态/语气差别)</span>
+                            </div>
+                            <div class="modal-example">
+                                Will you open the door for me?
+                            </div>
+                            <div class="modal-example">
+                                Would you like a cup of tea?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Should -->
+                    <div class="modal-verb-card">
+                        <div class="modal-header">should</div>
+                        
+                        <div class="usage-section">
+                            <div class="usage-title">表应该</div>
+                            <div class="modal-example">
+                                You should help her.
+                            </div>
+                        </div>
+
+                        <div class="usage-section">
+                            <div class="usage-title">表可能</div>
+                            <div class="modal-example">
+                                The film should be very good.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Must -->
+                    <div class="modal-verb-card">
+                        <div class="modal-header">must</div>
+                        
+                        <div class="usage-section">
+                            <div class="usage-title">表必须</div>
+                            <div class="modal-example">
+                                You must finish it tonight.
+                            </div>
+                        </div>
+
+                        <div class="usage-section">
+                            <div class="usage-title">表可能</div>
+                            <div class="modal-example">
+                                It must be John's book.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 助动词 Section -->
+        <div class="section">
+            <div class="section-header">
+                4. 助动词be,do,have (Auxiliary Verbs)
+            </div>
+            <div class="section-content">
+                <div class="auxiliary-section">
+                    <div style="font-size: 1.3rem; font-weight: bold; color: #2c5530; margin-bottom: 30px;">
+                        助动词的主要功能
+                    </div>
+                    
+                    <div class="auxiliary-buttons">
+                        <div class="aux-button dark-green">
+                            构成时态
+                        </div>
+                        <div class="aux-button medium-green">
+                            构成语态
+                        </div>
+                        <div class="aux-button light-green">
+                            构成疑问和否定
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tense-examples">
+                    <div class="tense-item">
+                        <div class="tense-title">1. 构成时态</div>
+                        <div class="tense-sentence">
+                            I <span class="highlight-phrase">am doing</span> my homework now.
+                            <br><small style="color: #666;">（现在进行时）</small>
+                        </div>
+                    </div>
+
+                    <div class="tense-item">
+                        <div class="tense-sentence">
+                            I <span class="highlight-phrase">have finished</span> my homework.
+                            <br><small style="color: #666;">（现在完成时）</small>
+                        </div>
+                    </div>
+
+                    <div class="tense-item">
+                        <div class="tense-sentence">
+                            I <span class="highlight-phrase">will do</span> my homework tomorrow.
+                            <br><small style="color: #666;">（一般将来时）</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tense-examples">
+                    <div class="tense-title">2. 构成语态</div>
+                    
+                    <div class="voice-comparison">
+                        <div class="voice-item active-voice">
+                            <div class="voice-label" style="color: #1976d2;">主动</div>
+                            <div class="voice-sentence">
+                                They built the house in 1998.
+                            </div>
+                        </div>
+
+                        <div class="voice-item passive-voice">
+                            <div class="voice-label" style="color: #c2185b;">被动</div>
+                            <div class="voice-sentence">
+                                The house <span class="red-highlight">was</span> built in 1998.
+                            </div>
+                            <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">
+                                （被动语态中的<span class="red-highlight">was</span>用红色高亮标出）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-negation">
+                    <div style="font-size: 1.3rem; font-weight: bold; color: #2c5530; margin-bottom: 20px;">
+                        3. 构成疑问句、否定句
+                    </div>
+                    
+                    <div class="sentence-examples">
+                        <div class="sentence-item statement">
+                            <strong>陈述句：</strong> I love you.
+                        </div>
+
+                        <div class="sentence-item negation">
+                            <strong>否定句：</strong> I <span class="red-text">don't</span> love you.
+                        </div>
+
+                        <div class="sentence-item question">
+                            <strong>疑问句：</strong> <span class="red-text">Do</span> you love me?
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 添加交互功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为助动词按钮添加点击效果
+            const auxButtons = document.querySelectorAll('.aux-button');
+            
+            auxButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除其他按钮的活动状态
+                    auxButtons.forEach(btn => btn.style.transform = 'translateY(0)');
+                    // 添加当前按钮的活动状态
+                    this.style.transform = 'translateY(-5px)';
+                });
+            });
+
+            // 为情态动词序列添加悬停效果
+            const modalWords = document.querySelectorAll('.modal-word');
+            
+            modalWords.forEach(word => {
+                word.addEventListener('mouseenter', function() {
+                    this.style.background = '#e8f5e8';
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                word.addEventListener('mouseleave', function() {
+                    this.style.background = 'white';
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // 添加滚动动画效果
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // 初始化动画状态并观察所有section
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // 为时态例句添加点击高亮效果
+            const highlightPhrases = document.querySelectorAll('.highlight-phrase');
+            
+            highlightPhrases.forEach(phrase => {
+                phrase.addEventListener('click', function() {
+                    this.style.background = '#ffcdd2';
+                    setTimeout(() => {
+                        this.style.background = '#ffebee';
+                    }, 500);
+                });
+            });
+        });
+
+        // 添加键盘导航支持
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-navigation');
+        });
+    </script>
+</body>
+</html>
